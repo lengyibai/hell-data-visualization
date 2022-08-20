@@ -16,7 +16,7 @@ export default {
   position: relative;
   flex: 1;
   height: 100%;
-  margin: 10px;
-  border: 1px solid #73baf8;
+  margin: 0.0521rem;
+  border: 0.0052rem solid #73baf8;
 }
 </style>

@@ -13,8 +13,8 @@ export default {
 </script>
 <style scoped lang="less">
 .HomeTop {
-  height: 60px;
-  margin-bottom: 20px;
-  border: 1px solid #73baf8;
+  height: 0.3125rem;
+  margin-bottom: 0.1042rem;
+  border: 0.0052rem solid #73baf8;
 }
 </style>

@@ -24,8 +24,8 @@ export default {
 <style scoped lang="less">
 .HomeBottom {
   display: flex;
-  height: 305px;
-  border: 1px solid #73baf8;
-  padding: 20px;
+  height: 1.5885rem;
+  border: 0.0052rem solid #73baf8;
+  padding: 0.1042rem;
 }
 </style>
