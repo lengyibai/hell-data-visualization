@@ -15,8 +15,7 @@ export default {
 .LeftTop {
   position: relative;
   width: 100%;
-  height: 50%;
-  margin-bottom: 10px;
+  height: calc(50% - 5px);
   border: 1px solid #73baf8;
 }
 </style>

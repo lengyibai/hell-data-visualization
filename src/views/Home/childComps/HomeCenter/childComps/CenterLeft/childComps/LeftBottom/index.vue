@@ -15,7 +15,7 @@ export default {
 .LeftBottom {
   position: relative;
   width: 100%;
-  height: 50%;
+  height: calc(50% - 5px);
   border: 1px solid #73baf8;
 }
 </style>
