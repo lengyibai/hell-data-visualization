@@ -2,8 +2,9 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 // import store from "./store";
-import "@/assets/css/index.css";
+import "@/style/clear.css";
 import "@/utils/flexible.js";
+import "@/style/css-variable.css";
 
 Vue.config.productionTip = false;
 
