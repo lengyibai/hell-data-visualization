@@ -53,15 +53,16 @@ export default {
   // border: 0.0052rem solid #73baf8;
   .home {
     position: absolute;
-    left: 10px;
+    left: 0;
+    bottom: 0;
     display: flex;
     align-items: center;
     font-size: var(--font-s-20);
-    transform: translateY(10%);
     // bottom: 0;
     color: var(--color-one);
+    transform: translateY(-25%);
     img {
-      margin-right: 5px;
+      margin-right: 0.0521rem;
     }
   }
   .menu {
@@ -71,16 +72,15 @@ export default {
     font-size: var(--font-s-18);
     color: var(--color-one);
     img {
-      width: 35px;
-      margin-bottom: 5px;
+      width: 0.1563rem;
     }
     &:nth-child(2),
     &:nth-of-type(3) {
-      margin-right: 110px;
+      margin-right: 0.5729rem;
     }
     &:nth-child(5),
     &:nth-of-type(6) {
-      margin-left: 110px;
+      margin-left: 0.5729rem;
     }
   }
   .title {
