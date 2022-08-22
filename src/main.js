@@ -5,6 +5,10 @@ import router from "./router";
 import "@/style/clear.css";
 import "@/utils/flexible.js";
 import "@/style/css-variable.css";
+import "@/components/index.js";
+
+import * as echarts from "echarts";
+Vue.prototype.$echarts = echarts;
 
 Vue.config.productionTip = false;
 
