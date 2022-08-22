@@ -1,5 +1,7 @@
 <template>
-  <div class="BottomOne"></div>
+  <div class="BottomOne">
+    <CardTitle title="阴司飘员构成" />
+  </div>
 </template>
 <script>
 export default {
@@ -17,6 +19,6 @@ export default {
   // width: 485px;
   flex: 1;
   height: 100%;
-  border-right: 1px solid #73baf8;
+  border-right: 1px solid var(--color-two);
 }
 </style>

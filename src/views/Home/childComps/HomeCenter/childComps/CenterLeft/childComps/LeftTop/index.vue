@@ -1,5 +1,7 @@
 <template>
-  <div class="LeftTop"></div>
+  <div class="LeftTop">
+    <CardTitle title="天地银行今日汇率" border center />
+  </div>
 </template>
 <script>
 export default {
@@ -16,6 +18,6 @@ export default {
   position: relative;
   width: 100%;
   height: calc(50% - 5px);
-  border: 1px solid #73baf8;
+  border: 1px solid var(--color-two);
 }
 </style>

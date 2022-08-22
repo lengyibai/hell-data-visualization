@@ -1,5 +1,7 @@
 <template>
-  <div class="RightTop"></div>
+  <div class="RightTop">
+    <CardTitle title="地府客流统计" border center />
+  </div>
 </template>
 <script>
 export default {
@@ -16,6 +18,6 @@ export default {
   position: relative;
   width: 100%;
   height: calc(50% - 5px);
-  border: 1px solid #73baf8;
+  border: 1px solid var(--color-two);
 }
 </style>

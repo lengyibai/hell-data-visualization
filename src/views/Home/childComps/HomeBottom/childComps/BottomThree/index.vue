@@ -1,5 +1,7 @@
 <template>
-  <div class="BottomThree"></div>
+  <div class="BottomThree">
+    <CardTitle title="阴司工单统计" />
+  </div>
 </template>
 <script>
 export default {
@@ -17,6 +19,6 @@ export default {
   // width: 480px;
   flex: 1;
   height: 100%;
-  border-right: 1px solid #73baf8;
+  border-right: 1px solid var(--color-two);
 }
 </style>

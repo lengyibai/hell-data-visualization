@@ -1,5 +1,7 @@
 <template>
-  <div class="BottomFour"></div>
+  <div class="BottomFour">
+    <CardTitle title="阴司数据中心" />
+  </div>
 </template>
 <script>
 export default {
