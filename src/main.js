@@ -3,7 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 // import store from "./store";
 import "@/style/clear.css";
-import "@/utils/flexible.js";
+import "@/style/beautify.css";
 import "@/style/css-variable.css";
 import "@/components/index.js";
 
