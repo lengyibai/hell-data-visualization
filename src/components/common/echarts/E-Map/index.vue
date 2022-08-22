@@ -26,11 +26,6 @@ export default {
         // 获取中国地图的矢量数据
         this.$echarts.registerMap("china", china);
         const initOptions = {
-          title: {
-            text: "商家分布",
-            left: 20,
-            top: 20,
-          },
           geo: {
             type: "map",
             map: "china",
@@ -42,7 +37,11 @@ export default {
           legend: {
             left: "5%",
             bottom: "5%",
-            orient: "vertical", //垂直摆放
+            orient: "vertical",
+            textStyle: {
+              color: "#fff",
+              fontSize: 20,
+            },
           },
         };
         this.chartInstance.setOption(initOptions);
