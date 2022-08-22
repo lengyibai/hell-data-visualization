@@ -50,7 +50,7 @@ export default {
   justify-content: center;
   height: 0.3125rem;
   margin-bottom: 0.1042rem;
-  // border: 0.0052rem solid #73baf8;
+  // border: 0.0052rem solid var(--color-two);
   .home {
     position: absolute;
     left: 0;
