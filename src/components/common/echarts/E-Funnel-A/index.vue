@@ -20,6 +20,7 @@ export default {
         const option = {
           title: {
             text: "年龄区间",
+            left: "5%",
             bottom: 0,
             textStyle: {
               color: "#fff",
@@ -27,16 +28,16 @@ export default {
           },
           tooltip: {
             trigger: "item",
-            formatter: "{a} <br/>{b} : {c}%",
+            formatter: "{a} <br/>{b}({c}) : {d}%",
           },
           series: [
             {
               name: "学历",
               type: "funnel",
-              left: 0,
+              left: "5%",
+              right: "5%",
               top: 0,
               bottom: 0,
-              width: "100%",
               sort: "descending",
               label: {
                 show: true,
