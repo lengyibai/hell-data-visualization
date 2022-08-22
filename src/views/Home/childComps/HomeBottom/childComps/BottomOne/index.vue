@@ -35,7 +35,6 @@ export default {
     align-items: center;
     width: 100%;
     flex: 1;
-    background-color: #000;
   }
 }
 </style>

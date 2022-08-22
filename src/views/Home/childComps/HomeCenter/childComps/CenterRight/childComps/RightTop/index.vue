@@ -27,7 +27,6 @@ export default {
   border: 1px solid var(--color-two);
   .tab {
     height: 45px;
-    background-color: red;
   }
   .chart {
     display: flex;
