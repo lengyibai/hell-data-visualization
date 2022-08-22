@@ -25,6 +25,7 @@ export default {
         const option = {
           color: "rgba(255, 228, 52)",
           radar: {
+            radius: "60%",
             center: ["50%", "57%"],
             indicator: [
               {
@@ -94,7 +95,6 @@ export default {
       this.titleFontSize = (this.$refs.radar?.offsetWidth / 100) * 4;
       const adapterOptions = {
         radar: {
-          radius: this.titleFontSize * 4,
           axisName: {
             fontSize: this.titleFontSize,
           },
