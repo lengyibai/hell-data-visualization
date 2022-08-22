@@ -3,7 +3,7 @@
     <CardTitle title="地府客流统计" border center />
     <div class="tab"></div>
     <div class="chart">
-      <E-Line-A />
+      <E-Bar-A />
     </div>
   </div>
 </template>
