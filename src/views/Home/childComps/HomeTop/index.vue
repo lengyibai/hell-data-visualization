@@ -48,9 +48,9 @@ export default {
   display: flex;
   position: relative;
   justify-content: center;
-  height: 0.3125rem;
-  margin-bottom: 0.1042rem;
-  // border: 0.0052rem solid var(--color-two);
+  height: 60px;
+  margin-bottom: 20px;
+  // border: 1px solid var(--color-two);
   .home {
     position: absolute;
     left: 0;
@@ -62,7 +62,7 @@ export default {
     color: var(--color-one);
     transform: translateY(-25%);
     img {
-      margin-right: 0.0521rem;
+      margin-right: 10px;
     }
   }
   .menu {
@@ -72,15 +72,15 @@ export default {
     font-size: var(--font-s-18);
     color: var(--color-one);
     img {
-      width: 0.1563rem;
+      width: 30.0096px;
     }
     &:nth-child(2),
     &:nth-of-type(3) {
-      margin-right: 0.5729rem;
+      margin-right: 109.9968px;
     }
     &:nth-child(5),
     &:nth-of-type(6) {
-      margin-left: 0.5729rem;
+      margin-left: 109.9968px;
     }
   }
   .title {

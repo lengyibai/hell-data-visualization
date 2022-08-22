@@ -30,8 +30,8 @@ export default {
 <style scoped lang="less">
 .CardTitle {
   display: flex;
-  height: 0.2083rem;
-  font-size: 0.1146rem;
+  height: 40px;
+  font-size: 22px;
   color: var(--color-one);
   padding-left: 1em;
 }

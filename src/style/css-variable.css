@@ -3,10 +3,9 @@
   --color-two: #73baf8;
 }
 
-
 :root {
-  --font-s-18: 0.0938rem;
-  --font-s-20: 0.1042rem;
-  --font-s-24: 0.125rem;
-  --font-s-40: 0.2083rem;
+  --font-s-18: 18px;
+  --font-s-20: 20px;
+  --font-s-24: 24px;
+  --font-s-40: 40px;
 }

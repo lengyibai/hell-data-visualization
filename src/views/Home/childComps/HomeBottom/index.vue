@@ -23,9 +23,10 @@ export default {
 </script>
 <style scoped lang="less">
 .HomeBottom {
+  position: relative;
   display: flex;
-  height: 1.5885rem;
-  border: 0.0052rem solid var(--color-two);
-  padding: 0.1042rem 0;
+  height: 305px;
+  border: 1px solid var(--color-two);
+  padding: 20px 0;
 }
 </style>
