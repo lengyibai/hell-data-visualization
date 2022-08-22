@@ -25,7 +25,7 @@ export default {
           grid: {
             left: "5%",
             right: "15%",
-            top: "20%",
+            top: "25%",
             bottom: "5%",
             containLabel: true, //包含坐标轴文字边距
           },

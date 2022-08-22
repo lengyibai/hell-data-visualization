@@ -48,6 +48,9 @@ export default {
                 color: "#fff",
               },
 
+              itemStyle: {
+                borderWidth: 0,
+              },
               emphasis: {
                 label: {
                   fontSize: 20,
