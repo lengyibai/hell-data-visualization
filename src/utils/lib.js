@@ -24,3 +24,15 @@ export function $fmtTime(date, fmt = "YYYY-MM-DD hh:mm:ss") {
   }
   return fmt;
 }
+
+/* 防抖 */
+export function $debounceDelay(fn, delay) {
+  return function (args) {
+    let that = this;
+    let _args = args;
+    clearTimeout(fn.id);
+    fn.id = setTimeout(function () {
+      fn.call(that, _args);
+    }, delay);
+  };
+}
