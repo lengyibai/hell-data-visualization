@@ -72,15 +72,15 @@ export default {
     font-size: var(--font-s-18);
     color: var(--color-one);
     img {
-      width: 30.0096px;
+      width: 30px;
     }
     &:nth-child(2),
     &:nth-of-type(3) {
-      margin-right: 109.9968px;
+      margin-right: 110px;
     }
     &:nth-child(5),
     &:nth-of-type(6) {
-      margin-left: 109.9968px;
+      margin-left: 110px;
     }
   }
   .title {
@@ -93,7 +93,8 @@ export default {
     transform: translateY(50%);
     color: var(--color-one);
     right: 0;
-    font-size: var(--font-s-24);
+    font-size: var(--font-s-32);
+    font-family: "科技";
   }
 }
 </style>
