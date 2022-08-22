@@ -16,13 +16,11 @@ export default {
   },
   mounted() {
     this.initChart();
-    /* 自适应 */
   },
   methods: {
     //#####··········初始化图表··········#####//
     initChart() {
       setTimeout(() => {
-        console.log(this);
         this.chartInstance = this.$echarts.init(this.$refs.MapRef, "black");
 
         // 获取中国地图的矢量数据

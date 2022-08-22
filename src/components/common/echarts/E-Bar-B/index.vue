@@ -13,9 +13,6 @@ export default {
   components: {},
   mounted() {
     this.initChart();
-    window.addEventListener("resize", () => {
-      this.screenAdapter();
-    });
   },
   methods: {
     initChart() {
@@ -97,15 +94,7 @@ export default {
         };
 
         this.echart.setOption(option);
-        this.screenAdapter();
       }, 200);
-    },
-    //#####··········屏幕适配··········#####//
-    screenAdapter() {
-      this.titleFontSize = (this.$refs.radar?.offsetWidth / 100) * 4;
-      const adapterOptions = {};
-      this.echart.setOption(adapterOptions);
-      this.echart.resize();
     },
   },
 };

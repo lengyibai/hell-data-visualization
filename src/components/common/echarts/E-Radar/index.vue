@@ -7,20 +7,15 @@ export default {
   data() {
     return {
       echart: null,
-      titleFontSize: 0, //文字自适应大小
     };
   },
   components: {},
   mounted() {
     this.initChart();
-    window.addEventListener("resize", () => {
-      this.screenAdapter();
-    });
   },
   methods: {
     initChart() {
       setTimeout(() => {
-        console.log(this.titleFontSize);
         this.echart = this.$echarts.init(this.$refs.radar);
         const option = {
           color: "rgba(255, 228, 52)",
@@ -45,7 +40,7 @@ export default {
             shape: "polygon",
             axisName: {
               color: "#fff",
-              fontSize: this.titleFontSize,
+              fontSize: 16,
             },
             splitArea: {
               areaStyle: {
@@ -87,21 +82,7 @@ export default {
         };
 
         this.echart.setOption(option);
-        this.screenAdapter();
       }, 200);
-    },
-    //#####··········屏幕适配··········#####//
-    screenAdapter() {
-      this.titleFontSize = (this.$refs.radar?.offsetWidth / 100) * 4;
-      const adapterOptions = {
-        radar: {
-          axisName: {
-            fontSize: this.titleFontSize,
-          },
-        },
-      };
-      this.echart.setOption(adapterOptions);
-      this.echart.resize();
     },
   },
 };
