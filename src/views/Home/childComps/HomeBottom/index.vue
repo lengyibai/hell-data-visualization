@@ -25,7 +25,7 @@ export default {
 .HomeBottom {
   display: flex;
   height: 1.5885rem;
-  border: 0.0052rem solid #73baf8;
-  padding: 0.1042rem;
+  border: 0.0052rem solid var(--color-two);
+  padding: 0.1042rem 0;
 }
 </style>
