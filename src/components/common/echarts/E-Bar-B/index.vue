@@ -23,7 +23,7 @@ export default {
           grid: {
             left: "5%",
             right: "15%",
-            top: "25%",
+            top: "30%",
             bottom: "5%",
             containLabel: true, //包含坐标轴文字边距
           },
@@ -32,10 +32,11 @@ export default {
           },
           legend: {
             itemWidth: 10,
-            itemHeight: 5,
+            itemHeight: 10,
             data: ["男飘员工", "女飘员工"],
             textStyle: {
               color: "#fff",
+              fontSize: 16,
             },
           },
           xAxis: [

@@ -1,7 +1,6 @@
 <template>
   <div class="BottomTwo">
     <CardTitle title="阴司飘员变化" />
-    <div class="info"></div>
     <div class="chart">
       <E-Bar-B />
     </div>

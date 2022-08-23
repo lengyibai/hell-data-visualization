@@ -198,7 +198,7 @@ export default {
             geo: {
               show: true,
               map: "china",
-              roam: true,
+              // roam: true,
               zoom: 1,
               center: [113.83531246, 34.0267395887],
               label: {
