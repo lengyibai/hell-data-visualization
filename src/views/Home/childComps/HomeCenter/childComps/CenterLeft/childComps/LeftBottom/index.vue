@@ -4,6 +4,11 @@
     <div class="chart">
       <E-Radar class="E-Radar" />
     </div>
+    <div class="count">
+      <CardSoulCount class="card" name="今日" :num="1444" />
+      <CardSoulCount class="card" name="本周" :num="3444" />
+      <CardSoulCount class="card" name="本月" :num="444333" />
+    </div>
   </div>
 </template>
 <script>
@@ -29,7 +34,17 @@ export default {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 200px;
+    height: 190px;
+  }
+  .count {
+    display: flex;
+    padding: 10px;
+    .card {
+      flex: 1;
+      &:nth-child(2) {
+        margin: 0 10px;
+      }
+    }
   }
 }
 </style>
