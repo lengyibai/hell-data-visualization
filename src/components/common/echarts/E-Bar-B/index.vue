@@ -19,6 +19,7 @@ export default {
       setTimeout(() => {
         this.echart = this.$echarts.init(this.$refs.radar);
         const option = {
+          color: ["#1a9bfc", "#e32f46"],
           grid: {
             left: "5%",
             right: "15%",
@@ -79,6 +80,29 @@ export default {
                 focus: "series",
               },
               data: [220, 182, 191, 234, 250],
+              itemStyle: {
+                normal: {
+                  color: () => {
+                    return new this.$echarts.graphic.LinearGradient(
+                      0,
+                      0,
+                      0,
+                      1,
+                      [
+                        {
+                          offset: 1,
+                          color: "#7049f0",
+                        },
+                        {
+                          offset: 0,
+                          color: "#1a9bfc",
+                        },
+                      ]
+                    );
+                  },
+                  opacity: 0.8,
+                },
+              },
             },
             {
               barGap: "25%",
@@ -89,6 +113,29 @@ export default {
                 focus: "series",
               },
               data: [150, 232, 201, 154, 190],
+              itemStyle: {
+                normal: {
+                  color: () => {
+                    return new this.$echarts.graphic.LinearGradient(
+                      0,
+                      0,
+                      0,
+                      1,
+                      [
+                        {
+                          offset: 1,
+                          color: "#e32f46",
+                        },
+                        {
+                          offset: 0,
+                          color: "#fb734e",
+                        },
+                      ]
+                    );
+                  },
+                  opacity: 0.8,
+                },
+              },
             },
           ],
         };

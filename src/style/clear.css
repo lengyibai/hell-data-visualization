@@ -6,6 +6,11 @@
   box-sizing: border-box;
   flex-shrink: 0;
   font-family: "微软雅黑";
+  user-select: none;
+}
+
+body {
+  overflow: hidden;
 }
 
 .clear-fix {

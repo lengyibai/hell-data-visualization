@@ -47,7 +47,13 @@ export default {
   width: 100%;
   height: 100%;
   padding: 15px 25px 5px;
-  background-image: linear-gradient(180deg, #1260a4 0%, #042351 100%);
+  background-image: linear-gradient(
+    43deg,
+    #0c2826 0%,
+    #0f2b36 46%,
+    #0d1b28 100%
+  );
+
   transform-origin: left top;
   transform: scale(var(--scale));
 }

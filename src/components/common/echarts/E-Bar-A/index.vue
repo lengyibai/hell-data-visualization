@@ -18,6 +18,7 @@ export default {
       setTimeout(() => {
         this.echart = this.$echarts.init(this.$refs.radar);
         const option = {
+          color: ["#02c3f1", "#a154e9", "#53e568"],
           grid: {
             left: "5%",
             right: "15%",
@@ -89,6 +90,29 @@ export default {
                 ],
               },
               data: [320, 332, 301, 334],
+              itemStyle: {
+                normal: {
+                  color: () => {
+                    return new this.$echarts.graphic.LinearGradient(
+                      0,
+                      0,
+                      0,
+                      1,
+                      [
+                        {
+                          offset: 1,
+                          color: "#02c3f1",
+                        },
+                        {
+                          offset: 0,
+                          color: "rgba(2,195,241,0.1)",
+                        },
+                      ]
+                    );
+                  },
+                  opacity: 0.8,
+                },
+              },
             },
             {
               barGap: "50%",
@@ -110,6 +134,29 @@ export default {
                 ],
               },
               data: [220, 182, 191, 234],
+              itemStyle: {
+                normal: {
+                  color: () => {
+                    return new this.$echarts.graphic.LinearGradient(
+                      0,
+                      0,
+                      0,
+                      1,
+                      [
+                        {
+                          offset: 1,
+                          color: "#a154e9",
+                        },
+                        {
+                          offset: 0,
+                          color: "rgba(161, 84, 233, 0.1)",
+                        },
+                      ]
+                    );
+                  },
+                  opacity: 0.8,
+                },
+              },
             },
             {
               barGap: "50%",
@@ -131,6 +178,29 @@ export default {
                 ],
               },
               data: [150, 232, 201, 154],
+              itemStyle: {
+                normal: {
+                  color: () => {
+                    return new this.$echarts.graphic.LinearGradient(
+                      0,
+                      0,
+                      0,
+                      1,
+                      [
+                        {
+                          offset: 1,
+                          color: "#53e568",
+                        },
+                        {
+                          offset: 0,
+                          color: "rgba(83, 229, 104, 0.1)",
+                        },
+                      ]
+                    );
+                  },
+                  opacity: 0.8,
+                },
+              },
             },
           ],
         };
