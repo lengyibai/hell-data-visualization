@@ -5,17 +5,7 @@
 </template>
 <script>
 import geoJson from "./file/china.js";
-import {
-  geoCoordMap,
-  geoGpsMap,
-  d1,
-  d2,
-  d3,
-  d4,
-  d5,
-  d6,
-  colors,
-} from "./file/data.js";
+import { geoCoordMap, geoGpsMap, d1, colors } from "./file/data.js";
 export default {
   name: "E-Map",
   data() {
@@ -30,11 +20,11 @@ export default {
     //#####··········初始化图表··········#####//
     initChart() {
       setTimeout(() => {
-        this.chartInstance = this.$echarts.init(this.$refs.MapRef, "black");
+        this.chartInstance = this.$echarts.init(this.$refs.MapRef);
 
         var colorIndex = 0;
-        var year = ["长春", "长春", "青岛", "青岛", "成都", "成都"];
-        var mapData = [[], [], [], [], [], []];
+        var year = ["长春"];
+        var mapData = [[]];
 
         /*柱子Y名称*/
         var categoryData = [];
@@ -46,36 +36,6 @@ export default {
             name: key,
             value: d1[key] / 100,
             value1: d1[key] / 100,
-          });
-          mapData[1].push({
-            year: "长春",
-            name: key,
-            value: d1[key] / 100,
-            value1: d2[key] / 100,
-          });
-          mapData[2].push({
-            year: "青岛",
-            name: key,
-            value: d3[key] / 100,
-            value1: d3[key] / 100,
-          });
-          mapData[3].push({
-            year: "青岛",
-            name: key,
-            value: d3[key] / 100,
-            value1: d4[key] / 100,
-          });
-          mapData[4].push({
-            year: "成都",
-            name: key,
-            value: d5[key] / 100,
-            value1: d5[key] / 100,
-          });
-          mapData[5].push({
-            year: "成都",
-            name: key,
-            value: d5[key] / 100,
-            value1: d6[key] / 100,
           });
         }
 
@@ -131,76 +91,14 @@ export default {
 
         let initOptions = {
           timeline: {
-            data: year,
-            axisType: "category",
-            autoPlay: true,
-            playInterval: 3000,
-            left: "10%",
-            right: "10%",
-            bottom: "3%",
-            width: "80%",
-            //  height: null,
-            label: {
-              normal: {
-                textStyle: {
-                  color: "#ddd",
-                },
-              },
-              emphasis: {
-                textStyle: {
-                  color: "#fff",
-                },
-              },
-            },
-            symbolSize: 10,
-            lineStyle: {
-              color: "#555",
-            },
-            checkpointStyle: {
-              borderColor: "#777",
-              borderWidth: 2,
-            },
-            controlStyle: {
-              showNextBtn: true,
-              showPrevBtn: true,
-              normal: {
-                color: "#666",
-                borderColor: "#666",
-              },
-              emphasis: {
-                color: "#aaa",
-                borderColor: "#aaa",
-              },
-            },
+            show: false,
           },
           baseOption: {
-            animation: true,
-            animationDuration: 1000,
-            animationEasing: "cubicInOut",
-            animationDurationUpdate: 1000,
-            animationEasingUpdate: "cubicInOut",
-            grid: {
-              right: "1%",
-              top: "15%",
-              bottom: "10%",
-              width: "20%",
-            },
-            tooltip: {
-              trigger: "axis", // hover触发器
-              axisPointer: {
-                // 坐标轴指示器，坐标轴触发有效
-                type: "shadow", // 默认为直线，可选为：'line' | 'shadow'
-                shadowStyle: {
-                  color: "rgba(150,150,150,0.1)", //hover颜色
-                },
-              },
-            },
             geo: {
               show: true,
               map: "china",
-              // roam: true,
-              zoom: 1,
-              center: [113.83531246, 34.0267395887],
+              zoom: 1.2,
+              center: [105, 36],
               label: {
                 emphasis: {
                   show: false,
@@ -244,78 +142,7 @@ export default {
 
         for (var n = 0; n < year.length; n++) {
           initOptions.options.push({
-            xAxis: {
-              type: "value",
-              scale: true,
-              position: "top",
-              min: 0,
-              boundaryGap: false,
-              splitLine: {
-                show: false,
-              },
-              axisLine: {
-                show: false,
-              },
-              axisTick: {
-                show: false,
-              },
-              axisLabel: {
-                margin: 2,
-                textStyle: {
-                  color: "#aaa",
-                },
-              },
-            },
-            yAxis: {
-              type: "category",
-              nameGap: 16,
-              axisLine: {
-                show: true,
-                lineStyle: {
-                  color: "#ddd",
-                },
-              },
-              axisTick: {
-                show: false,
-                lineStyle: {
-                  color: "#ddd",
-                },
-              },
-              axisLabel: {
-                interval: 0,
-                textStyle: {
-                  color: "#ddd",
-                },
-              },
-              data: categoryData[n],
-            },
-
             series: [
-              {
-                //文字和标志
-                name: "light",
-                type: "scatter",
-                coordinateSystem: "geo",
-                data: convertData(mapData[n]),
-                symbolSize: function (val) {
-                  return val[2] / 10;
-                },
-                label: {
-                  normal: {
-                    formatter: "{b}",
-                    position: "right",
-                    show: true,
-                  },
-                  emphasis: {
-                    show: true,
-                  },
-                },
-                itemStyle: {
-                  normal: {
-                    color: colors[colorIndex][n],
-                  },
-                },
-              },
               //地图？
               {
                 type: "map",
@@ -402,18 +229,6 @@ export default {
                   },
                 },
                 data: convertToLineData(mapData[n], geoGpsMap[n + 1]),
-              },
-              //柱状图
-              {
-                zlevel: 1.5,
-                type: "bar",
-                symbol: "none",
-                itemStyle: {
-                  normal: {
-                    color: colors[colorIndex][n],
-                  },
-                },
-                data: barData[n],
               },
             ],
           });

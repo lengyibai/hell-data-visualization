@@ -7,7 +7,6 @@ export default {
   data() {
     return {
       echart: null,
-      titleFontSize: 0, //文字自适应大小
     };
   },
   components: {},

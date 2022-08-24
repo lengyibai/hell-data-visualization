@@ -50,6 +50,5 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
-  color: rgba(241, 255, 52, 0.493);
 }
 </style>

@@ -25,7 +25,7 @@ export default {
           grid: {
             left: "5%",
             right: "0%",
-            top: "0%",
+            top: "10%",
             bottom: "0%",
             containLabel: true, //包含坐标轴文字边距
           },
@@ -179,7 +179,6 @@ export default {
         if (this.currentPage > this.totalPage) {
           this.currentPage = 1;
         }
-        console.log(this.currentPage);
         this.updateChart();
       }, 3000);
     },

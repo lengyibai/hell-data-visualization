@@ -14,6 +14,9 @@
           </div>
         </div>
       </div>
+      <div class="chart">
+        <E-Scatter />
+      </div>
     </div>
   </div>
 </template>
@@ -56,13 +59,19 @@ export default {
 </script>
 <style scoped lang="less">
 .RightBottom {
+  display: flex;
+  flex-direction: column;
   position: relative;
   width: 100%;
   height: calc(50% - 5px);
   border: 1px solid var(--color-two);
   .box {
+    position: relative;
+    display: flex;
+    flex: 1;
     padding: 25px 30px;
     .hotList {
+      margin-right: 20px;
       .title {
         color: var(--color-one);
         font-size: 18px;
@@ -82,6 +91,10 @@ export default {
           }
         }
       }
+    }
+    .chart {
+      flex: 1;
+      height: 100%;
     }
   }
 }

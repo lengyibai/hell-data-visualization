@@ -20,7 +20,6 @@ export default {
   methods: {
     initChart() {
       setTimeout(() => {
-        console.log(this.titleFontSize);
         this.echart = this.$echarts.init(this.$refs.radar);
         const option = {
           color: "rgba(255, 228, 52)",
