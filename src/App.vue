@@ -6,9 +6,17 @@
       height: $height + 'px',
     }"
   >
-    <router-view />
+    <Home />
+    <Tips />
   </div>
 </template>
+<script>
+import Home from "@/views/Home";
+import Tips from "@/views/Tips";
+export default {
+  components: { Home, Tips },
+};
+</script>
 
 <style lang="less">
 #app {
