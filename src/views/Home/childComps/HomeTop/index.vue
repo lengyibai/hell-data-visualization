@@ -12,7 +12,7 @@
       <img src="@/assets/svg/header/business.svg" alt="business" />
       <span>地府业务平台</span>
     </div>
-    <div class="title">智慧地府可视化平台</div>
+    <div class="title">地府可视化平台</div>
     <div class="menu">
       <img src="@/assets/svg/header/data.svg" alt="data" />
       <span>地府数据平台</span>
