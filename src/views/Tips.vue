@@ -26,7 +26,8 @@ export default {
   position: fixed;
   width: 100%;
   height: 100%;
-  inset: 0;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
